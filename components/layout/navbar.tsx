@@ -18,8 +18,7 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 w-full shadow-lg bg-white dark:text-gray-100 text-black dark:bg-gray-700 z-20">
-      <nav
-      >
+      <nav>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className=" flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -41,7 +40,12 @@ const Navbar = () => {
               <div className=" hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   {navList.map(item => (
-                    <Link href={item.route} key={item.name}>
+                    <Link
+                      href={item.route}
+                      key={item.name}
+                      passHref
+                      scroll={false}
+                    >
                       <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 px-3 py-2 rounded-md text-sm lg:text-base font-medium">
                         {item.name}
                       </a>
@@ -145,7 +149,7 @@ const Navbar = () => {
                     onClick={() => setIsOpen(!isOpen)}
                     aria-hidden="true"
                   >
-                    <Link href={item.route}>
+                    <Link href={item.route} scroll={false}>
                       <a className=" hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-gray-900  dark:focus:bg-gray-900 block px-3 py-2 rounded-md text-sm md:text-base font-medium">
                         {item.name}
                       </a>
