@@ -19,12 +19,9 @@ const Projects: NextPage = () => {
         <div className="divide-y divide-gray-800">
           <div className="pb-6 space-y-2 md:space-y-5 ">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
-              {/* Projects */}
               {title}
             </h1>
             <p className="font-normal tracking-tight sm:w-9/12 md:w-10/12 lg:w-9/12 text-base md:text-lg ">
-              {/* My personal projects are a way for me to chronicle my growth as a
-              developer. */}
               {subtitle}
             </p>
           </div>
