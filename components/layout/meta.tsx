@@ -6,7 +6,6 @@ const Meta = ({ title, keywords, description }) => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <meta name="keywords" content={keywords} />
-      <link rel='icon' href='/favicon.ico' />
       <title>{title}</title>
       <meta name="title" property="og:title" content={title} />
       <meta
