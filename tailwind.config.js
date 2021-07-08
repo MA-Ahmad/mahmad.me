@@ -32,6 +32,12 @@ module.exports = windmill({
             strong: {
               color: theme("colors.gray.300")
             },
+            h1: {
+              color: theme("colors.gray.300")
+            },
+            h2: {
+              color: theme("colors.gray.300")
+            },
             h3: {
               color: theme("colors.gray.300")
             },
