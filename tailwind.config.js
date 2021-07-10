@@ -47,6 +47,12 @@ module.exports = windmill({
             h5: {
               color: theme("colors.gray.300")
             },
+            p: {
+              color: theme("colors.gray.300")
+            },
+            pre: {
+              background: "#33353e"
+            },
             a: {
               textDecoration: "none",
               "&:hover": {
