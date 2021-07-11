@@ -16,8 +16,8 @@ const Projects: NextPage = () => {
   return (
     <Layout title={title} description={subtitle}>
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 dark:text-gray-300">
-        <div className="divide-y divide-gray-800">
-          <div className="pb-6 space-y-2 md:space-y-5 ">
+        <div className="divide-y divide-gray-800 dark:divide-gray-300 md:space-y-3">
+          <div className="pb-4 space-y-2 md:space-y-5">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
               {title}
             </h1>
@@ -25,7 +25,8 @@ const Projects: NextPage = () => {
               {subtitle}
             </p>
           </div>
-          <div className="space-y-6 xl:space-y-10 ">
+          <div></div>
+          <div className="space-y-6 xl:space-y-10 border-none">
             {projectsList.map((project, index) => (
               <>
                 <ProjectLayoutMed project={project} />
