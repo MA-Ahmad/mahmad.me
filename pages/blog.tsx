@@ -15,8 +15,8 @@ const Blog: NextPage<Props> = props => {
   return (
     <Layout title={title} description={subtitle}>
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 dark:text-gray-300">
-        <div className="divide-y divide-gray-800">
-          <div className="pb-6 space-y-2 md:space-y-5 ">
+        <div className="divide-y divide-gray-800 dark:divide-gray-300 md:space-y-3">
+          <div className="pb-4 space-y-2 md:space-y-5">
             <h1 className="text-3xl font-extrabold leading-9 tracking-tight dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
               {title}
             </h1>
@@ -24,7 +24,8 @@ const Blog: NextPage<Props> = props => {
               {subtitle}
             </p>
           </div>
-          <div className="grid grid-cols-1">
+          <div></div>
+          <div className="grid grid-cols-1 border-none">
             <ul>
               <AnimatePresence>
                 {posts.length &&
@@ -51,7 +52,10 @@ const Blog: NextPage<Props> = props => {
                     >
                       <Link href={`/blog/${post.slug}`}>
                         <a>
-                          <div className="w-full hover:bg-gray-200 p-5 rounded-sm dark:hover:bg-gray-700">
+                          <motion.div
+                            whileHover={{ y: -5 }}
+                            className="w-full hover:bg-gray-200 hover:shadow-lg p-5 rounded-md dark:hover:bg-gray-700"
+                          >
                             <div className="flex flex-col md:flex-row justify-between items-center">
                               <h4 className="text-lg md:text-xl font-semibold w-full text-gray-900 dark:text-gray-100">
                                 {post.title}
@@ -166,7 +170,9 @@ const Blog: NextPage<Props> = props => {
                                       <path d="m438.874 3.863h-276.72c-40.321 0-73.126 32.804-73.126 73.125v11.83h-15.903c-40.321.001-73.125 32.805-73.125 73.126v185.938c0 40.322 32.804 73.125 73.125 73.125h78.18c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-78.18c-32.05 0-58.125-26.075-58.125-58.125v-185.938c0-32.05 26.075-58.125 58.125-58.125h276.721c32.05 0 58.125 26.075 58.125 58.125v185.938c0 32.05-26.075 58.125-58.125 58.125-8.543 0-16.518 3.758-21.881 10.312-29.417 35.95-64.447 61.355-88.653 76.336-2.257 1.393-4.855-.96-3.669-3.382 9.512-19.408 16.805-39.761 21.675-60.494 2.728-11.618-6.129-22.772-18.109-22.772h-52.903c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5h52.903c2.301 0 4.027 2.128 3.506 4.342-4.612 19.638-11.523 38.924-20.541 57.323-7.776 15.872 10.025 32.025 25.032 22.738 25.178-15.583 61.642-42.04 92.368-79.591 2.503-3.058 6.247-4.812 10.272-4.812 40.321 0 73.125-32.804 73.125-73.125v-11.83h15.903c40.322 0 73.126-32.804 73.126-73.125v-75.469c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v75.469c0 32.05-26.075 58.125-58.126 58.125h-15.903v-159.108c0-40.321-32.804-73.125-73.125-73.125h-245.818v-11.83c0-32.05 26.075-58.125 58.126-58.125h276.72c32.051 0 58.126 26.075 58.126 58.125v75.469c0 4.142 3.357 7.5 7.5 7.5s7.5-3.358 7.5-7.5v-75.469c0-40.322-32.804-73.126-73.126-73.126z" />
                                     </svg>
                                   </p>
-                                ) : ''}
+                                ) : (
+                                  ""
+                                )}
                               </div>
                             </div>
                             <p className="text-sm mb-2">
@@ -182,7 +188,7 @@ const Blog: NextPage<Props> = props => {
                             <p className="text-gray-600 dark:text-gray-400">
                               {post.description}
                             </p>
-                          </div>
+                          </motion.div>
                         </a>
                       </Link>
                     </motion.li>
