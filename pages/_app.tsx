@@ -6,7 +6,6 @@ import { Windmill } from "@windmill/react-ui";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "../components/layout/navbar";
 import "../css/tailwind.css";
-import "../css/global.css";
 import SocialIcons from "components/layout/socialIcons";
 
 const App = ({ Component, pageProps, router }: AppProps) => {
