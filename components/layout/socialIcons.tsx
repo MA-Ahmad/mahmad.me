@@ -15,7 +15,7 @@ const links = [
     },
 ]
 
-const SocialIcons = (props): JSX.Element => (
+const SocialIcons = (): JSX.Element => (
     <div className="flex flex-row text-2xl text-gray-500 dark:text-gray-300">
         {links.map(({ Icon, href }, i) => (
             <a
