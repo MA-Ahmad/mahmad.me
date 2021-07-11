@@ -2,7 +2,10 @@ const windmill = require("@windmill/react-ui/config");
 
 module.exports = windmill({
   purge: {
-    content: ["./pages/**/*.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"]
+    content: [
+      "./pages/**/*.{js,jsx,ts,tsx}",
+      "./components/**/*.{js,jsx,ts,tsx}"
+    ]
   },
   darkMode: "class", // or 'media' or 'class'
   theme: {
