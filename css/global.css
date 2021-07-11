@@ -1,0 +1,7 @@
+:root {
+  --light-bg-color: #f4f5ed;
+}
+
+.theme-light body {
+    background: var(--light-bg-color);
+}
