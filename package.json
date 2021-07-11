@@ -1,21 +1,12 @@
 {
-  "name": "with-tailwindcss",
+  "name": "mahmad.me",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:coverage": "yarn-or-npm test --coverage",
-    "test:debug": "yarn-or-npm test --debug --detectOpenHandles",
-    "test:ci": "yarn-or-npm test --runInBand --no-cache --ci",
-    "test": "NODE_ENV=test jest",
-    "lint": "eslint './{src,pages}/**/*' --ext .js,.jsx,.tsx,.ts",
-    "format": "eslint './{src,pages}/**/*' --ext .js,.jsx,.tsx,.ts --fix",
-    "analyze": "cross-env BUNDLE_ANALYZE=both next build",
-    "export": "cross-env NODE_ENV=production next export",
-    "production": "npm-run-all analyze export",
-    "production:clean": "rimraf out/"
+    "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^0.3.1",
