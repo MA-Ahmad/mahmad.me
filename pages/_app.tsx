@@ -11,10 +11,10 @@ import SocialIcons from "components/layout/socialIcons";
 const App = ({ Component, pageProps, router }: AppProps) => {
   return (
     <>
-      {/* <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" /> */}
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
       <Head>
-        {/* <link rel="preconnect" href="https://fonts.googleapis.com" /> */}
-        {/* <link rel="dns-prefetch" href="https://fonts.googleapis.com" /> */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       </Head>
 
       <Windmill usePreferences>
