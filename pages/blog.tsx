@@ -56,15 +56,15 @@ const Blog: NextPage<Props> = props => {
                             whileHover={{ y: -5 }}
                             className="w-full hover:bg-gray-200 hover:shadow-lg p-5 rounded-md dark:hover:bg-gray-700"
                           >
-                            <div className="flex flex-col md:flex-row justify-between items-center">
+                            <div className="flex flex-col md:flex-row justify-between sm:items-start md:items-center">
                               <h4 className="text-lg md:text-xl font-semibold w-full text-gray-900 dark:text-gray-100">
                                 {post.title}
                               </h4>
                               {/* <p className="text-gray-500 text-left md:text-right w-32 mb-4 md:mb-0">
                                 {post.page_views_count} views
                               </p> */}
-                              <div className="text-sm flex justify-end dark:text-gray-400 sm:justify-start items-center">
-                                <p className="text-sm flex justify-end dark:text-gray-400 sm:justify-start items-center">
+                              <div className="text-sm flex sm:justify-start md:justify-end dark:text-gray-400 md:items-center">
+                                <p className="text-sm flex sm:justify-start md:justify-end dark:text-gray-400 md:items-center">
                                   {post.public_reactions_count}&nbsp;
                                   <svg
                                     id="Capa_1"
