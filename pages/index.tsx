@@ -13,7 +13,7 @@ const Home: NextPage<Props> = props => {
   return (
     <Layout title={title} description={subtitle}>
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 dark:text-gray-300">
-        <div className="md:space-y-20">
+        <div className="space-y-20">
           <Main />
           <LatestArticles posts={posts} />
         </div>
