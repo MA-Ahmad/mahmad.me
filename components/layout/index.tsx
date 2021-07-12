@@ -23,7 +23,7 @@ const Layout = ({ children, title, description }: Props): JSX.Element => (
             exit="exit"
             variants={variants}
             transition={{ type: 'linear' }}
-            className="flex items-start w-full justify-center pt-10 sm:pt-24 md:pt-32 h-full"
+            className="flex items-start w-full justify-center pt-28 md:pt-32 h-full"
         >
             {children}
         </motion.main>
