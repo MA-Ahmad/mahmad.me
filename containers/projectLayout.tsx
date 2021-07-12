@@ -13,7 +13,7 @@ const ProjectLayoutMed = ({ project }) => {
         className="dark:hidden"
       >
         <img
-          className="dark:hidden block  absolute inset-0 h-full w-full object-cover sm:object-contain md:object-fill rounded-lg opacity-50 hover:opacity-95"
+          className="dark:hidden block absolute inset-0 h-full w-full object-cover sm:object-contain md:object-fill rounded-lg opacity-50 hover:opacity-95"
           src={project.imageLight}
           alt={project.title}
         />
