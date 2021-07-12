@@ -1,7 +1,13 @@
 const windmill = require("@windmill/react-ui/config");
 
 module.exports = windmill({
-  purge: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+  purge: {
+    content: [
+      "./pages/**/*.{js,jsx,ts,tsx}",
+      "./components/**/*.{js,jsx,ts,tsx}",
+      "./containers/**/*.{js,jsx,ts,tsx}"
+    ]
+  },
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
