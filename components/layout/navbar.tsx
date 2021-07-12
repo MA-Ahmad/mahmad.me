@@ -3,6 +3,7 @@ import { Transition } from "@headlessui/react";
 import Link from "next/link";
 import { WindmillContext } from "@windmill/react-ui";
 import { Moon, Sun } from "../Icons/Icons";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
   const navList = [
     { name: "Home", route: "/" },
     { name: "Blog", route: "/blog" },
-    { name: "Projects", route: "/projects" },
+    { name: "Projects", route: "/projects" }
   ];
 
   return (
@@ -53,32 +54,34 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <button
-              type="button"
-              aria-label="dark mode"
-              onClick={toggleMode}
-              className="shadow hidden md:block self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500  dark:bg-black dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
-            >
-              {mode === "dark" ? (
-                <Sun aria-hidden="true" />
-              ) : (
-                <Moon aria-hidden="true" />
-              )}
-            </button>
+            <AnimatePresence exitBeforeEnter initial={false}>
+              <motion.button
+                className="hidden md:block text-2xl sm:text-3xl text-yellow-400 dark:text-yellow-300 focus:outline-none"
+                onClick={() => toggleMode()}
+                key={mode === "dark" ? "dark-icon" : "light-icon"}
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 20, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                {mode === "dark" ? "🌙" : "🌤"}
+              </motion.button>
+            </AnimatePresence>
             <div className="-mr-2 flex md:hidden space-x-4">
               {/* <!-- Mobile menu button --> */}
-              <button
-                type="button"
-                aria-label="dark mode"
-                onClick={toggleMode}
-                className="shadow block md:hidden self-center bg-white hover:bg-gray-100 focus:ring focus:ring-gray-500  dark:bg-black dark:hover:bg-gray-900 focus:outline-none rounded-md p-1.5"
-              >
-                {mode === "dark" ? (
-                  <Sun aria-hidden="true" />
-                ) : (
-                  <Moon aria-hidden="true" />
-                )}
-              </button>
+              <AnimatePresence exitBeforeEnter initial={false}>
+                <motion.button
+                  className="block md:hidden text-2xl sm:text-3xl text-yellow-400 dark:text-yellow-300 focus:outline-none"
+                  onClick={() => toggleMode()}
+                  key={mode === "dark" ? "dark-icon" : "light-icon"}
+                  initial={{ y: -20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 20, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {mode === "dark" ? "🌙" : "🌤"}
+                </motion.button>
+              </AnimatePresence>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
