@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const title = "Blog ✍️";
 const subtitle =
-  "I share anything that may help others, technologies I'm using and cool things I've made.";
+  "I love building new things. This blog is a way for me to write down and share new ideas and lessons with everyone.";
 
 const Blog: NextPage<Props> = props => {
   const { posts } = props;
@@ -174,7 +174,6 @@ const Blog: NextPage<Props> = props => {
                                   ""
                                 )}
                               </div>
-                            
                             </div>
                             <p className="text-sm mb-2">
                               <span>
