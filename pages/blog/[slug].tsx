@@ -51,7 +51,7 @@ const BlogPage: NextPage<AllBlogProps> = ({ articleContent, blogDetails }) => {
               <motion.img
                 variants={fadeInUp}
                 src={blogDetails.cover_image}
-                className="object-fit h-auto md:object-cover w-full md:max-h-64 bg-center rounded-lg"
+                className="object-fit h-auto w-full bg-center rounded-lg"
                 alt="Blog Cover"
               />
             )}
